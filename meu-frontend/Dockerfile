@@ -25,8 +25,8 @@ RUN rm -rf /usr/share/nginx/html/*
 # Copia os arquivos compilados da aplicação para o diretório do Nginx
 COPY --from=build /app/build /usr/share/nginx/html
 
-# Exposição da porta 3000 para acessar a aplicação
-EXPOSE 3000
+# Exposição da porta 80 para acessar a aplicação
+EXPOSE 80
 
 # Comando para iniciar o Nginx
 CMD ["nginx", "-g", "daemon off;"]
